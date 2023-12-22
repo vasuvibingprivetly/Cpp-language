@@ -2,22 +2,30 @@
 using namespace std;
 
 class Cricket{
-	public: 
-		void getTotalover(int a){
-			cout << "Total over of match: " << a << endl;
-		}
+	
+	protected: 
+		int a;
 };
 
 class Testmatch : public Cricket{
 	public: 
 		void getTotalover(int a){
-			cout << "match over's: " << a << endl;
+			cout << "over of Testmatch: " << a << endl;
+		}
+};
+
+class T20match : public Cricket{
+	public: 
+		void getTotalover(int a){
+			cout << "over of T20match: " << a << endl;
 		}
 };
 
 int main(){
 
 	Testmatch obj1;
+	T20match obj2;
 	
-	obj1.getTotalover(5);	
+	obj1.getTotalover(90);	
+	obj2.getTotalover(20);
 }
